@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Importanto o Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Importando o Tailwincss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
     <p> Seja bem vindo(a) ao meu site! </p>
+
+    <button class="btn btn-light">  Botão do Bootstrap</button>
+
 
     <h1> Título Princiapal </h1>
     <h2> Subtítulo </h2>
@@ -51,11 +63,107 @@
      <!-- links -->
       <a href="https://oceanbrasil.com/"> Site Oceanbrasil</a> <br>
 
-      <!-- imagem -->
-       <img src="..\img\python.png" alt="Comandos Básicos"> <br>
+     <!-- imagem -->
+     <img src="..\img\python.png" alt="Comandos Básicos"> <br>
+     <img src = "{{ url_for('static', filename='img/python.png') }}" alt="Comandos Básicos" width="400px" height="400">  
 
+        <!-- Tabela -->
+     <table>                    <!-- Abre a tabela -->
+        <thead>                 <!-- Table head   - Metadados da tabela -->
+            <tr>                <!-- Table row    - linha  -->
+                <th> Nome </th> <!-- Table header - célula de cabeçalho -->    
+                <th> Idade</th>
+                <th> Cidade</th>
+            </tr>
+        </thead>
 
-   
+        <tbody>                 <!-- Table body   - Dados/corpo da tabela -->
+            <tr>
+                <td> Jorge</td>
+                <td> 40</td>
+                <td> Salvador</td>
+            </tr>
+
+            <tr>
+                <td> Luana</td>
+                <td> 30</td>
+                <td> Belo Horizonte</td>
+            </tr>
+
+        </tbody>
+     </table>
+
+<!-- Formulário -->
+ <!-- Formulário para processar (URL que receberá os dados) utilizando o método POST. Ou seja ele enviará dados no corpo da requisição  -->
+<form action ='/processar' method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="0" max="120">
+
+    <label for="data">Data de Nascimento:</label>
+    <input type="date" id="data" name="data" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
+
+    <label> Interesses </label>
+    <input type="checkbox" id="tech" name="interesses" value="tecnologia">
+    <label for="tech">Tecnologia</label>
+
+    <input type="checkbox" id="sports" name="interesses" value="esportes">
+    <label for="sports">Esportes</label>
+
+    <select id="estado" mame="estado">
+        <option value="">Selecione...</option>
+        <option value="ac">AC</option>
+        <option value="al">AL</option>
+        <option value="ap">AP</option>
+        <option value="am">AM</option>
+        <option value="ba">BA</option>
+        <option value="ce">CE</option>
+        <option value="df">DF</option>
+        <option value="es">ES</option>
+        <option value="go">GO</option>
+        <option value="ma">MA</option>
+        <option value="mt">MT</option>
+        <option value="ms">MS</option>
+        <option value="mg">MG</option>
+        <option value="pa">PA</option>
+        <option value="pb">PB</option>
+        <option value="pr">PR</option>
+        <option value="pe">PE</option>
+        <option value="pi">PI</option>
+        <option value="rj">RJ</option>
+        <option value="rn">RN</option>
+        <option value="rs">RS</option>
+        <option value="ro">RO</option>
+        <option value="rr">RR</option>
+        <option value="sc">SC</option>
+        <option value="sp">SP</option>
+        <option value="se">SE</option>
+        <option value="to">TO</option>
+    </select>
+</form>
+
+<button type="submit">Enviar</button>   <!-- Botão de enviar do formulário-->
+<button type="reset">Limpar</button>    <!-- Botão de limpar do formulário-->
+
+ 
+<!-- Elemento de bloco -->
+ <!-- O div sempre tem um classe que é uma identificação para que seja possível aplicar um CSS a div inteira -->
+<div class="container">
+    <h2>Seção</h2>
+    <p>Conteúdo da seção</p>
+
+</div>
 
 </body>
 </html>

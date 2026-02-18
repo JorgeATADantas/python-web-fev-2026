@@ -37,15 +37,24 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+# criando outra rota usando decorator (URL)
+@app.route('/name')     #http://127.0.0.1:5001/name
 
+# criando o recurso 
+def username():
+    name = "Jorge Dantas"
+    return render_template("user.html", username=name) # retornará a renderização do user.html, em que username = name utilizando
+                                                        # o render_template do FLASK (jinjar)
+
+
+""" Deletado na Aula 3 pois não estavamos usando
 # criando outra rota usando decorator (URL)
 @app.route('/nome')     #http://127.0.0.1:5001/nome
 
 # criando o recurso 
 def exibir_nome():
     return "Jorge Dantas"
-
-
+"""
 
 
 # ponto de entrada (entry point)
