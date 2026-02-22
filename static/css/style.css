@@ -1,22 +1,70 @@
 body{
-    font-family:Arial, sans-serif;
-    background-color: #bebaba;
-    color:#333;
-    font-size: 20px;
-    font-weight 700;
-    font-style: italic;
-    text-align: center;
-    background-position: center;
-    padding:10px 10px 20px 20px;
+    background-color: #eeee;
+    font-family: sans-serif;
+    
+    h1,h2,a{
+        color: #377BA8;
+    }
 
+    h1{
+        border-bottom: 2px solid #eee ;
+    }
 
+    h2{
+        font-size: 1.2em;
+    }
 
+    .conteudo_principal{
+        margin: 2em auto;
+        width: 55em;
+        border: 5px solid #ccc;
+        padding: 0.8em;
+        background-color: white;
+
+    }
+
+    .nav{
+        text-align: right;
+        font-size: 0.8em;
+        padding: 0.3;
+        margin-bottom: 3em;
+        background-attachment: #fafafa;
+
+    }
+
+    .flash{
+        background-color: #CEE5F5;
+        padding: 0.5em;
+        border: 1px solid #AACBE2;
+    }
+
+    .erro{
+        background-color: #F0D6D6;
+        padding: 0.5em;
+    }
+
+    .inserir-post{
+        font-size: 0.9em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .inserir-post dl{
+        font-weight: bold;
+    }
+
+    .posts{
+        list-style: none;
+        margin: 0;
+    }
+
+    .posts li {
+        margin: 0.8em 1.2em;
+    }
+
+    .post li h2{
+        margin-left: -1em;	
+    }
 
 }
 
-.container{
-    border:1px solid black;
-    padding:10px;
-    margin-top:20px;
 
-}
